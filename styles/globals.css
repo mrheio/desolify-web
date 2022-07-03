@@ -1,16 +1,44 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --navbar-height: 60px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    @apply bg-foreground text-on-foreground;
+}
+
+a,
+.link {
+    @apply text-gray-600 font-semibold smooth-transition;
+}
+
+a:hover,
+.link:hover {
+    @apply text-black;
+}
+
+.link--active {
+    @apply text-black;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@layer utilities {
+    .smooth-transition {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    .form-flow {
+        @apply [&>*+*]:mt-6;
+    }
 }
