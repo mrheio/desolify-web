@@ -1,4 +1,4 @@
-import { Button, NavLink } from '../components';
+import { NavLink } from '../components';
 
 const Header = () => {
 	return (
@@ -13,7 +13,6 @@ const Header = () => {
 					</li>
 				</ul>
 			</nav>
-			<Button>Get Started</Button>
 		</header>
 	);
 };
