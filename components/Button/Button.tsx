@@ -11,9 +11,6 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	shape?: ButtonShape;
 };
 
-const getClasses = (style: ButtonStyle, variant: ButtonVariant, shape: ButtonShape) =>
-	`${styles.Button} ${styles.Button}--${style} ${styles.Button}--${variant} ${styles.Button}--${shape}`;
-
 const Button = ({
 	style = 'primary',
 	variant = 'simple',
@@ -23,7 +20,16 @@ const Button = ({
 	...rest
 }: ButtonProps) => {
 	return (
-		<button className={getClasses(style, variant, shape)} type={type} {...rest}>
+		<button
+			className={[
+				styles.button,
+				styles[`button--${style}`],
+				styles[`button--${variant}`],
+				styles[`button--${shape}`],
+			].join(' ')}
+			type={type}
+			{...rest}
+		>
 			{children}
 		</button>
 	);

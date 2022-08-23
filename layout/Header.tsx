@@ -13,7 +13,7 @@ const Header = () => {
 					</li>
 				</ul>
 			</nav>
-			<Button>Get Started</Button>
+			<Button shape="rounded">Get Started</Button>
 		</header>
 	);
 };
