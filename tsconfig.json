@@ -40,11 +40,10 @@
 		"paths": {
 			"@styles/*": ["./styles/*"],
 			"@state/*": ["./state/*"],
-			"@components/*": ["./components/*"],
+			"@components": ["./components"],
 			"@configs/*": ["./configs/*"],
 			"@pages/*": ["./pages/*"],
 			"@routing": ["./routing/*"],
-			"@utils/*": ["./utils/*"],
 			"@images/*": ["./public/images/*"],
 			"@models/*": ["./models/*"],
 			"@layout/*": ["./layout/*"],
