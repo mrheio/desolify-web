@@ -17,8 +17,12 @@ module.exports = {
 	},
 	sassOptions: {
 		includePaths: [join(__dirname, 'styles')],
+		prependData: `
+			@import "_colors.scss";
+			@import "_variables.scss";
+		`,
 	},
-	webpack: config => {
+	webpack: (config) => {
 		config.resolve = {
 			...config.resolve,
 			fallback: {
