@@ -1,6 +1,29 @@
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $navbar-height;
+	background-color: $clr-primary-700;
+	color: $clr-white;
+	padding-inline: 2em;
 	display: flex;
-	align-items: center;
+	justify-content: space-between;
+
+	&-left {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	&-right {
+		display: flex;
+		align-items: center;
+	}
+
+	&-button-text {
+		margin-left: 0.75rem;
+	}
 
 	@include hideSmallScreens();
 
