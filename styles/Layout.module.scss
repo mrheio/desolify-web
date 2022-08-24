@@ -1,0 +1,5 @@
+.layout {
+	&__main {
+		min-height: calc(100vh - $navbar-height);
+	}
+}
