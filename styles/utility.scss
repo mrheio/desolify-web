@@ -1,0 +1,53 @@
+.text-white {
+	color: $clr-white;
+}
+
+.text-black {
+	color: $clr-black;
+}
+
+.bg-primary-500 {
+	background-color: $clr-primary-500;
+}
+
+.bg-primary-600 {
+	background-color: $clr-primary-600;
+}
+
+.fw-normal {
+	font-weight: $fw-normal;
+}
+
+.fw-semi-bold {
+	font-weight: $fw-semi-bold;
+}
+
+.fw-bold {
+	font-weight: $fw-bold;
+}
+
+.fs-primary-heading {
+	font-size: $fs-primary-heading;
+	line-height: 1.1;
+}
+
+.fs-secondary-heading {
+	font-size: $fs-secondary-heading;
+	line-height: 1.1;
+}
+
+.fs-300 {
+	font-size: $fs-300;
+}
+
+.fs-400 {
+	font-size: $fs-400;
+}
+
+.fs-500 {
+	font-size: $fs-500;
+}
+
+.fs-600 {
+	font-size: $fs-600;
+}

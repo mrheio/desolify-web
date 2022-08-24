@@ -1,39 +1,11 @@
 .navbar {
 	display: flex;
 	align-items: center;
-	gap: 4rem;
 
-	&__logo {
+	@include hideSmallScreens();
+
+	&-list {
 		display: flex;
-		align-items: center;
-		padding-inline: 0.5em; // for UX (easier to click/press)
-		height: $navbar-height;
-
-		@include activeShrink();
-
-		h1 {
-			color: $clr-white;
-		}
-	}
-
-	&__linkList {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-
-		li {
-			padding: 0.25em 0.6em;
-
-			a {
-				color: $clr-white;
-				font-weight: $fw-semi-bold;
-			}
-		}
-
-		@include hideSmallScreens();
-	}
-
-	button {
-		margin-left: auto;
+		gap: 1rem;
 	}
 }

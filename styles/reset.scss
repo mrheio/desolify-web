@@ -52,10 +52,13 @@ ol {
 a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
+
 a,
+a:visited,
+a:hover,
 a:active {
 	text-decoration: none;
-	color: $clr-black;
+	color: inherit;
 }
 
 /* Make images easier to work with */

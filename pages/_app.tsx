@@ -7,6 +7,7 @@ import { Layout } from '@layout';
 
 import '@styles/reset.scss';
 import '@styles/styles.scss';
+import '@styles/utility.scss';
 
 config.autoAddCss = false;
 

@@ -1,34 +1,24 @@
-import React, { FC } from 'react';
-
-import { Button, Link } from '@components';
+import { FC } from 'react';
 
 import styles from '@components/Navbar/Navbar.module.scss';
-import { faGamepad } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { URLS } from '@utils/misc';
+import NavLink from './NavLink';
 
 interface Props {}
 
 const Navbar: FC<Props> = ({}) => {
 	return (
-		<nav className={styles.navbar}>
-			<Link className={styles['navbar__logo']} href={'/'}>
-				<h1>DESOLIFY</h1>
-			</Link>
-			<ul className={styles['navbar__linkList']}>
+		<nav className={`${styles.navbar} fw-semi-bold`}>
+			<ul className={styles['navbar-list']}>
 				<li>
 					{/* TODO: change this */}
-					<Link href={URLS.HOME}>Teams</Link>
+					<NavLink href={URLS.HOME}>Teams</NavLink>
 				</li>
 				<li>
 					{/* TODO: change this */}
-					<Link href={URLS.HOME}>Games</Link>
+					<NavLink href={URLS.GAMES}>Games</NavLink>
 				</li>
 			</ul>
-
-			<Button icon={<FontAwesomeIcon icon={faGamepad} />} shape="rounded">
-				Get Started
-			</Button>
 		</nav>
 	);
 };

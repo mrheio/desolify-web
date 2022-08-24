@@ -1,14 +1,9 @@
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
 html,
 body {
 	padding: 0;
 	margin: 0;
 	font-family: $ff-body;
+	color: $clr-black;
 }
 
 .full-width {
@@ -17,4 +12,20 @@ body {
 
 .mh-100 {
 	min-height: 100vh;
+}
+
+a,
+.link {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover,
+.link:hover {
+	color: $clr-black;
+}
+
+a[data-style='active'],
+.link[data-style='active'] {
+	color: $clr-secondary-300;
 }

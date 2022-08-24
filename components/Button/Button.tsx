@@ -9,31 +9,26 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	style?: ButtonStyle;
 	variant?: ButtonVariant;
 	shape?: ButtonShape;
-	icon?: JSX.Element;
 };
 
 const Button = ({
 	style = 'primary',
 	variant = 'simple',
 	shape = 'normal',
+	className,
 	type = 'button',
-	icon,
 	children,
 	...rest
 }: ButtonProps) => {
 	return (
 		<button
-			className={[
-				styles.button,
-				styles[`button--${style}`],
-				styles[`button--${variant}`],
-				styles[`button--${shape}`],
-				icon && styles['button--with-icon'],
-			].join(' ')}
+			className={`${styles.button}`}
+			data-style={style}
+			data-variant={variant}
+			data-shape={shape}
 			type={type}
 			{...rest}
 		>
-			{icon && icon}
 			{children}
 		</button>
 	);
