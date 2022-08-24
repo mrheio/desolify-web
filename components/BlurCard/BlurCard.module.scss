@@ -1,0 +1,14 @@
+.blur-card {
+	h2 {
+		color: $clr-neutral-900;
+		font-size: $fs-700;
+		font-weight: $fw-bold;
+		line-height: 1.2;
+	}
+
+	p {
+		max-width: 40ch;
+		color: $clr-white;
+		line-height: 1.4;
+	}
+}

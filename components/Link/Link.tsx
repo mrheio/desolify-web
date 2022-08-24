@@ -2,11 +2,11 @@ import { joinClasses } from '@utils/basics';
 import { default as NextLink, LinkProps } from 'next/link';
 import { forwardRef, PropsWithChildren } from 'react';
 
-interface Props extends LinkProps {
+type Props = LinkProps & {
 	underline?: boolean;
 	className?: string;
 	fullWidth?: boolean;
-}
+};
 
 const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<Props>>(
 	({ children, underline, fullWidth, className, href, ...rest }, ref) => {

@@ -9,7 +9,7 @@ import { joinClasses } from '@utils/basics';
 import { URLS } from '@utils/misc';
 import styles from './Navbar.module.scss';
 
-interface Props {}
+type Props = {};
 
 const Navbar: FC<Props> = ({}) => {
 	return (

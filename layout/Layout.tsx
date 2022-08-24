@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 import styles from './Layout.module.scss';
 
-interface Props {}
+type Props = {};
 
 const Layout: FC<PropsWithChildren<Props>> = ({ children }) => {
 	return (
