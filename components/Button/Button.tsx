@@ -9,6 +9,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	style?: ButtonStyle;
 	variant?: ButtonVariant;
 	shape?: ButtonShape;
+	icon?: JSX.Element;
 };
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
 	variant = 'simple',
 	shape = 'normal',
 	type = 'button',
+	icon,
 	children,
 	...rest
 }: ButtonProps) => {
@@ -26,10 +28,12 @@ const Button = ({
 				styles[`button--${style}`],
 				styles[`button--${variant}`],
 				styles[`button--${shape}`],
+				icon && styles['button--with-icon'],
 			].join(' ')}
 			type={type}
 			{...rest}
 		>
+			{icon && icon}
 			{children}
 		</button>
 	);
