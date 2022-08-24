@@ -1,0 +1,11 @@
+@mixin hideSmallScreens() {
+	@media screen and (max-width: $container-m) {
+		display: none;
+	}
+}
+
+@mixin activeShrink() {
+	&:active {
+		transform: scale(0.95);
+	}
+}
