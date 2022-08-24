@@ -1,9 +1,10 @@
+import { joinClasses } from '@utils/basics';
 import { ButtonHTMLAttributes } from 'react';
 import styles from './Button.module.scss';
 
 type ButtonStyle = 'primary' | 'secondary' | 'naked';
-type ButtonVariant = 'simple' | 'google';
-type ButtonShape = 'normal' | 'rounded';
+type ButtonVariant = 'google';
+type ButtonShape = 'rounded';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	style?: ButtonStyle;
@@ -11,21 +12,16 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	shape?: ButtonShape;
 };
 
-const Button = ({
-	style = 'primary',
-	variant = 'simple',
-	shape = 'normal',
-	className,
-	type = 'button',
-	children,
-	...rest
-}: ButtonProps) => {
+const Button = ({ style = 'primary', variant, shape, className, type = 'button', children, ...rest }: ButtonProps) => {
 	return (
 		<button
-			className={`${styles.button}`}
-			data-style={style}
-			data-variant={variant}
-			data-shape={shape}
+			className={joinClasses(
+				styles.button,
+				styles[`button-${style}`],
+				variant && styles[`button-${variant}`],
+				shape && styles[`button-${shape}`],
+				className,
+			)}
 			type={type}
 			{...rest}
 		>

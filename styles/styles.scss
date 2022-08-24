@@ -25,7 +25,6 @@ a:hover,
 	color: $clr-black;
 }
 
-a[data-style='active'],
-.link[data-style='active'] {
-	color: $clr-secondary-300;
+.link-active {
+	color: $clr-secondary-300 !important;
 }
