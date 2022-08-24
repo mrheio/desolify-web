@@ -18,17 +18,24 @@ body {
 	min-height: 100vh;
 }
 
+.mh-100-nav {
+	min-height: calc(100vh - $navbar-height);
+}
+
 a,
-.link {
+.link,
+.link a {
 	cursor: pointer;
 	text-decoration: none;
 }
 
 a:hover,
-.link:hover {
+.link:hover,
+.link:hover a {
 	color: $clr-black;
 }
 
-.link-active {
+.link-active,
+.link-active a {
 	color: $clr-secondary-300 !important;
 }

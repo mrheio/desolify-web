@@ -9,6 +9,8 @@
 	padding-inline: 2em;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	gap: 1.5rem;
 
 	&-left {
 		display: flex;
@@ -25,10 +27,9 @@
 		margin-left: 0.75rem;
 	}
 
-	@include hideSmallScreens();
-
 	&-list {
 		display: flex;
 		gap: 1rem;
+		flex: 1;
 	}
 }

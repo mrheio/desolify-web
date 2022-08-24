@@ -12,7 +12,7 @@ const NavLink = ({ href, children }: NavLinkProps) => {
 	const { pathname } = useRouter();
 
 	return (
-		<Link className={pathname === href ? 'link-active' : ''} href={href}>
+		<Link className={pathname === href ? 'link-active' : undefined} href={href}>
 			{children}
 		</Link>
 	);

@@ -28,7 +28,7 @@
 
 .fs-primary-heading {
 	font-size: $fs-primary-heading;
-	line-height: 1.1;
+	line-height: 1.4;
 }
 
 .fs-secondary-heading {
@@ -50,4 +50,8 @@
 
 .fs-600 {
 	font-size: $fs-600;
+}
+
+.bg-gradient-primary {
+	background: linear-gradient(145deg, $clr-navbar, $clr-turquoise-300);
 }

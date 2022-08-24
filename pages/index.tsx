@@ -9,9 +9,19 @@ type Props = {};
 const Home: FC<Props> = () => {
 	return (
 		<>
-			<section className={joinClasses('grid grid-cols-2 grid-rows-2', styles['section-one'])}>
-				<h1>Home screen</h1>
-				<h1>Home screen</h1>
+			<section
+				className={joinClasses(
+					'mh-100-nav grid grid-cols-2 grid-rows-2 bg-gradient-primary',
+					styles['section-one'],
+				)}
+			>
+				<h1 className="text-white fw-bold fs-primary-heading">
+					Find teams.
+					<br />
+					Or players.
+					<br />
+					Or both.
+				</h1>
 			</section>
 		</>
 	);

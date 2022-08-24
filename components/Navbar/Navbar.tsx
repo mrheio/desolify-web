@@ -15,18 +15,20 @@ const Navbar: FC<Props> = ({}) => {
 	return (
 		<nav className={joinClasses(styles.navbar, 'fw-semi-bold')}>
 			<span className={styles['navbar-left']}>
-				<Link href="/">
+				<Link href={URLS.HOME}>
 					<h1>DESOLIFY</h1>
 				</Link>
-				<ul className={styles['navbar-list']}>
-					<li>
-						<NavLink href={URLS.TEAMS}>Teams</NavLink>
-					</li>
-					<li>
-						<NavLink href={URLS.GAMES}>Games</NavLink>
-					</li>
-				</ul>
 			</span>
+
+			<ul className={styles['navbar-list']}>
+				<li>
+					<NavLink href={URLS.TEAMS}>Teams</NavLink>
+				</li>
+				<li>
+					<NavLink href={URLS.GAMES}>Games</NavLink>
+				</li>
+			</ul>
+
 			<span className={styles['navbar-right']}>
 				<Button shape="rounded">
 					<FontAwesomeIcon icon={faGamepad} />
