@@ -12,7 +12,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	shape?: ButtonShape;
 };
 
-const Button = ({ style = 'primary', variant, shape, className, type = 'button', children, ...rest }: ButtonProps) => {
+const Button = ({ style = 'primary', variant, shape, className, children, ...rest }: ButtonProps) => {
 	return (
 		<button
 			className={joinClasses(
@@ -22,7 +22,6 @@ const Button = ({ style = 'primary', variant, shape, className, type = 'button',
 				shape && styles[`button-${shape}`],
 				className,
 			)}
-			type={type}
 			{...rest}
 		>
 			{children}
