@@ -5,26 +5,38 @@
 	border-radius: 8px;
 	font-size: $fs-button;
 	font-weight: $fw-bold;
-}
+	text-align: center;
+	transition: transform 150ms ease-out;
 
-.button--primary {
-	background-color: $clr-primary-600;
-	color: $clr-white;
-}
+	@include activeShrink();
 
-.button--primary:hover {
-	background-color: $clr-primary-500;
-}
+	&--with-icon {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		white-space: nowrap;
+	}
 
-.button--secondary {
-	background: $clr-secondary-600;
-	color: $clr-black;
-}
+	&--primary {
+		background-color: $clr-primary-600;
+		color: $clr-white;
+	}
 
-.button--secondary:hover {
-	background: $clr-secondary-500;
-}
+	&--primary:hover {
+		background-color: $clr-primary-500;
+	}
 
-.button--rounded {
-	border-radius: 32px;
+	&--secondary {
+		background: $clr-secondary-600;
+		color: $clr-black;
+	}
+
+	&--secondary:hover {
+		background: $clr-secondary-500;
+	}
+
+	&--rounded {
+		padding: 0.75em 1.35em;
+		border-radius: 32px;
+	}
 }
