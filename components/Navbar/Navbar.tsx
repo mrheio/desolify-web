@@ -14,7 +14,6 @@ interface Props {}
 const Navbar: FC<Props> = ({}) => {
 	return (
 		<nav className={joinClasses(styles.navbar, 'fw-semi-bold')}>
-<<<<<<< Updated upstream
 			<span className={styles['navbar-left']}>
 				<Link href="/">
 					<h1>DESOLIFY</h1>
@@ -34,16 +33,6 @@ const Navbar: FC<Props> = ({}) => {
 					<span className={styles['navbar-button-text']}>Get Started</span>
 				</Button>
 			</span>
-=======
-			<ul className={styles['navbar-list']}>
-				<li>
-					<NavLink href={URLS.TEAMS}>Teams</NavLink>
-				</li>
-				<li>
-					<NavLink href={URLS.GAMES}>Games</NavLink>
-				</li>
-			</ul>
->>>>>>> Stashed changes
 		</nav>
 	);
 };
