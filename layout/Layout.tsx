@@ -1,14 +1,16 @@
+import { Header } from '@layout';
 import { FC, PropsWithChildren } from 'react';
 import Footer from './Footer';
-import Header from './Header';
 
-interface LayoutProps {}
+import styles from '@styles/Layout.module.scss';
 
-const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children }) => {
+interface Props {}
+
+const Layout: FC<PropsWithChildren<Props>> = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<main className="pt-navbar min-h-screen">{children}</main>
+			<main className={styles['layout__main']}>{children}</main>
 			<Footer />
 		</>
 	);

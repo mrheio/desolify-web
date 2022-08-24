@@ -1,20 +1,15 @@
-import { NavLink } from '../components';
+import { Navbar } from '@components';
 
-const Header = () => {
+import styles from '@styles/pages/Index.module.scss';
+import { FC } from 'react';
+
+type Props = {};
+
+const Header: FC<Props> = ({}) => {
 	return (
-		<header className="fixed w-full">
-			<nav>
-				<ul>
-					<li>
-						<NavLink href="/">Teams</NavLink>
-					</li>
-					<li>
-						<NavLink href="/">Games</NavLink>
-					</li>
-				</ul>
-			</nav>
-			<Button>Get Started</Button>
-		</header>
+		<div className={styles.header}>
+			<Navbar />
+		</div>
 	);
 };
 

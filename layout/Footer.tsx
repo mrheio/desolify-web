@@ -1,6 +1,10 @@
-const Footer = () => {
+import { FC } from 'react';
+
+type Props = {};
+
+const Footer: FC<Props> = ({}) => {
 	return (
-		<footer className="bg-primary-50 h-20">
+		<footer>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit et ea obcaecati. Esse nobis voluptatibus non
 			modi numquam adipisci unde?
 		</footer>

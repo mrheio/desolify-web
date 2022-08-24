@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 html,
 body {
 	padding: 0;
@@ -7,4 +13,8 @@ body {
 
 .full-width {
 	width: 100%;
+}
+
+.mh-100 {
+	min-height: 100vh;
 }

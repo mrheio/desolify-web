@@ -1,2 +1,9 @@
+.header {
+	// if padding right is .5 padding left is 0
+	// always subtract .5 from padding-left here
+	padding: 0.65rem 1.85rem 0.65rem 1.35rem;
+	background-color: $clr-indigo-700;
+}
+
 .homepage {
 }
