@@ -16,10 +16,11 @@ module.exports = {
 		domains: ['firebasestorage.googleapis.com'],
 	},
 	sassOptions: {
-		includePaths: [join(__dirname, 'styles')],
+		includePaths: [join(__dirname, 'styles'), join(__dirname, 'components')],
 		prependData: `
 			@import "_colors.scss";
 			@import "_variables.scss";
+			@import "_mixins.scss";
 		`,
 	},
 	webpack: (config) => {
