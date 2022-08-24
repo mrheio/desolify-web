@@ -20,7 +20,7 @@ const Navbar: FC<Props> = ({}) => {
 				</Link>
 				<ul className={styles['navbar-list']}>
 					<li>
-						<NavLink href={URLS.HOME}>Teams</NavLink>
+						<NavLink href={URLS.TEAMS}>Teams</NavLink>
 					</li>
 					<li>
 						<NavLink href={URLS.GAMES}>Games</NavLink>
