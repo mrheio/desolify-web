@@ -11,8 +11,8 @@ interface Props extends LinkProps {
 const Link = forwardRef<HTMLAnchorElement, PropsWithChildren<Props>>(
 	({ children, underline, fullWidth, className, href, ...rest }, ref) => {
 		return (
-			<NextLink href={href} passHref>
-				<a ref={ref} className={joinClasses('link', className)} {...rest}>
+			<NextLink href={href} passHref {...rest}>
+				<a ref={ref} className={joinClasses('link', className)}>
 					{children}
 				</a>
 			</NextLink>

@@ -9,10 +9,10 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ href, children }: NavLinkProps) => {
-	const router = useRouter();
+	const { pathname } = useRouter();
 
 	return (
-		<Link className={router.pathname === href ? 'link-active' : ''} href={href}>
+		<Link className={pathname === href ? 'link-active' : ''} href={href}>
 			{children}
 		</Link>
 	);
