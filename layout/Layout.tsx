@@ -2,7 +2,7 @@ import { Header } from '@layout';
 import { FC, PropsWithChildren } from 'react';
 import Footer from './Footer';
 
-import styles from './/Layout.module.scss';
+import styles from './Layout.module.scss';
 
 interface Props {}
 
