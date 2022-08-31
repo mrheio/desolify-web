@@ -1,8 +1,6 @@
 import { Header } from '@layout';
 import { FC, PropsWithChildren } from 'react';
-import Footer from './Footer';
-
-import styles from './Layout.module.scss';
+import Footer from './Footer/Footer';
 
 type Props = {};
 
@@ -10,7 +8,7 @@ const Layout: FC<PropsWithChildren<Props>> = ({ children }) => {
 	return (
 		<>
 			<Header />
-			<main className={styles.main}>{children}</main>
+			<main className="min-h-main-content pt-navbar">{children}</main>
 			<Footer />
 		</>
 	);

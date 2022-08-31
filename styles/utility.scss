@@ -14,6 +14,14 @@
 	background-color: $clr-primary-600;
 }
 
+.ff-primary {
+	font-family: $ff-primary;
+}
+
+.ff-heading {
+	font-family: $ff-heading;
+}
+
 .fw-normal {
 	font-weight: $fw-normal;
 }
@@ -28,7 +36,7 @@
 
 .fs-primary-heading {
 	font-size: $fs-primary-heading;
-	line-height: 1.6;
+	line-height: 1.175;
 }
 
 .fs-secondary-heading {
@@ -54,13 +62,4 @@
 
 .bg-gradient-primary {
 	background: linear-gradient(145deg, $clr-navbar, $clr-secondary-300);
-}
-
-.bg-blur-card {
-	background-color: rgba($clr-secondary-300, 0.15);
-}
-
-.grid-cols-rows-2-2 {
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
 }

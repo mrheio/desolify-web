@@ -1,7 +1,7 @@
-export { default as BlurCard } from './BlurCard/BlurCard';
 export { default as Button } from './Button/Button';
-export { default as HomeCallToAction } from './HomeCallToAction/HomeCallToAction';
-export { default as GamingIllustration } from './Illustrations/GamingIllustration';
+export { default as Card } from './Card';
+export { default as Container } from './Container';
+export { default as DualSection } from './DualSection';
 export { default as Link } from './Link/Link';
 export { default as NavLink } from './Link/NavLink';
-export { default as Navbar } from './Navbar/Navbar';
+export { default as Navbar } from './Navbar';
