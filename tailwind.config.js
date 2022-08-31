@@ -1,49 +1,59 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}',
-    ],
-    theme: {
-        extend: {
-            colors: {
-                primary: {
-                    DEFAULT: '#5529F5',
-                    50: '#E0D8FD',
-                    100: '#D1C5FC',
-                    200: '#B29EFA',
-                    300: '#9377F9',
-                    400: '#7450F7',
-                    500: '#5529F5',
-                    600: '#370ADC',
-                    700: '#2A08A6',
-                    800: '#1C0570',
-                    900: '#0F033B',
-                },
-                'on-primary': '#fff',
-                foreground: '#f7f5ff',
-                'on-foreground': '#000',
-                error: {
-                    DEFAULT: '#FF1F39',
-                    50: '#FFD7DB',
-                    100: '#FFC2C9',
-                    200: '#FF99A5',
-                    300: '#FF7181',
-                    400: '#FF485D',
-                    500: '#FF1F39',
-                    600: '#E6001B',
-                    700: '#AE0014',
-                    800: '#76000E',
-                    900: '#3E0007',
-                },
-            },
-            height: {
-                navbar: '60px',
-            },
-            padding: {
-                navbar: '60px',
-            },
-        },
-    },
-    plugins: [],
+	content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './layout/**/*.{js,ts,jsx,tsx}'],
+	theme: {
+		extend: {
+			colors: {
+				primary: {
+					DEFAULT: '#6366f1',
+					50: '#eef2ff',
+					100: '#e0e7ff',
+					200: '#c7d2fe',
+					300: '#a5b4fc',
+					400: '#818cf8',
+					500: '#6366f1',
+					600: '#4f46e5',
+					700: '#4338ca',
+					800: '#3730a3',
+					900: '#312e81',
+				},
+				secondary: {
+					DEFAULT: '#14b0b8',
+					50: '#91eef3',
+					100: '#7eebf1',
+					200: '#59e6ed',
+					300: '#35e0e9',
+					400: '#18d3dd',
+					500: '#14b0b8',
+					600: '#0f8085',
+					700: '#094f53',
+					800: '#041f20',
+					900: '#000000',
+				},
+				navbar: '#4338ca',
+			},
+			height: {
+				navbar: '60px',
+			},
+			padding: {
+				navbar: '60px',
+			},
+			margin: {
+				navbar: '60px',
+			},
+			fontSize: {
+				300: '0.8125rem',
+				400: '0.875rem',
+				500: '0.9375rem',
+				600: '1rem',
+				700: '1.875rem',
+				800: '2.5rem',
+				900: '3.5rem',
+			},
+			minHeight: {
+				'main-content': 'calc(100vh - 60px)',
+			},
+		},
+	},
+	plugins: [],
 };

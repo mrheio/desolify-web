@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 import { UrlObject } from 'url';
+import Link from './Link';
 
 type NavLinkProps = {
 	href: string | UrlObject;
@@ -9,15 +9,11 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ href, children }: NavLinkProps) => {
-	const router = useRouter();
-
-	const classes = () => {
-		return router.pathname === href ? 'link link--active' : 'link';
-	};
+	const { pathname } = useRouter();
 
 	return (
-		<Link href={href}>
-			<a className={classes()}>{children}</a>
+		<Link className={pathname === href ? 'link-active' : undefined} href={href}>
+			{children}
 		</Link>
 	);
 };

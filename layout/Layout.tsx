@@ -1,18 +1,17 @@
-import Footer from './Footer';
-import Header from './Header';
+import { Header } from '@layout';
+import { FC, PropsWithChildren } from 'react';
+import Footer from './Footer/Footer';
 
-type LayoutProps = {
-    children: JSX.Element;
-};
+type Props = {};
 
-const Layout = ({ children }: LayoutProps) => {
-    return (
-        <>
-            <Header />
-            <main className="pt-navbar min-h-screen">{children}</main>
-            <Footer />
-        </>
-    );
+const Layout: FC<PropsWithChildren<Props>> = ({ children }) => {
+	return (
+		<>
+			<Header />
+			<main className="min-h-main-content pt-navbar">{children}</main>
+			<Footer />
+		</>
+	);
 };
 
 export default Layout;

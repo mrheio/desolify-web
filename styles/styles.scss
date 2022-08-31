@@ -1,6 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
 	padding: 0;
 	margin: 0;
 	font-family: $ff-body;
+	color: $clr-black;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.mh-100 {
+	min-height: 100vh;
+}
+
+.mh-100-nav {
+	min-height: calc(100vh - $navbar-height);
+}
+
+a,
+.link,
+.link a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover,
+.link:hover,
+.link:hover a {
+	color: $clr-black;
+}
+
+.link-active,
+.link-active a {
+	color: $clr-secondary-300 !important;
 }

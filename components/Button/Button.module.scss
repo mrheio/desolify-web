@@ -1,0 +1,37 @@
+.button {
+	cursor: pointer;
+	padding: 1.2em 3.25em;
+	border: none;
+	border-radius: 8px;
+	font-size: $fs-button;
+	font-weight: $fw-bold;
+	text-align: center;
+	transition: transform 150ms ease-out;
+
+	@include activeShrink();
+
+	&-primary {
+		background-color: $clr-primary-600 !important;
+		color: $clr-white !important;
+	}
+
+	&-primary:hover {
+		background-color: $clr-primary-500 !important;
+		color: $clr-white !important;
+	}
+
+	&-secondary {
+		background: $clr-secondary-400 !important;
+		color: $clr-black !important;
+	}
+
+	&-secondary:hover {
+		background: $clr-secondary-300 !important;
+		color: $clr-black !important;
+	}
+
+	&-rounded {
+		padding: 0.75em 1.35em;
+		border-radius: 32px;
+	}
+}

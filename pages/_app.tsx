@@ -1,12 +1,17 @@
+import type { AppProps } from 'next/app';
+
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+
+import { Layout } from '@layout';
+
+import '@styles/reset.scss';
 import '@styles/styles.scss';
-import type { AppProps } from 'next/app';
-import Layout from '../layout';
+import '@styles/utility.scss';
 
 config.autoAddCss = false;
 
-function App({ Component, pageProps }: AppProps) {
+function Desolify({ Component, pageProps }: AppProps) {
 	return (
 		<Layout>
 			<Component {...pageProps} />
@@ -14,4 +19,4 @@ function App({ Component, pageProps }: AppProps) {
 	);
 }
 
-export default App;
+export default Desolify;

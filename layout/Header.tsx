@@ -1,19 +1,13 @@
-import { Button, NavLink } from '../components';
+import { Navbar } from '@components';
 
-const Header = () => {
+import { FC } from 'react';
+
+type Props = {};
+
+const Header: FC<Props> = ({}) => {
 	return (
-		<header className="fixed w-full">
-			<nav>
-				<ul>
-					<li>
-						<NavLink href="/">Teams</NavLink>
-					</li>
-					<li>
-						<NavLink href="/">Games</NavLink>
-					</li>
-				</ul>
-			</nav>
-			<Button>Get Started</Button>
+		<header>
+			<Navbar />
 		</header>
 	);
 };
