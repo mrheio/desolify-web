@@ -11,21 +11,23 @@
 	@include activeShrink();
 
 	&-primary {
-		background-color: $clr-primary-600;
-		color: $clr-white;
+		background-color: $clr-primary-600 !important;
+		color: $clr-white !important;
 	}
 
 	&-primary:hover {
-		background-color: $clr-primary-500;
+		background-color: $clr-primary-500 !important;
+		color: $clr-white !important;
 	}
 
 	&-secondary {
-		background: $clr-secondary-400;
-		color: $clr-black;
+		background: $clr-secondary-400 !important;
+		color: $clr-black !important;
 	}
 
 	&-secondary:hover {
-		background: $clr-secondary-300;
+		background: $clr-secondary-300 !important;
+		color: $clr-black !important;
 	}
 
 	&-rounded {

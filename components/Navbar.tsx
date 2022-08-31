@@ -5,22 +5,20 @@ import Link from '@components/Link/Link';
 import NavLink from '@components/Link/NavLink';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { joinClasses } from '@utils/basics';
 import { URLS } from '@utils/misc';
-import styles from './Navbar.module.scss';
 
 type Props = {};
 
 const Navbar: FC<Props> = ({}) => {
 	return (
-		<nav className={joinClasses(styles.navbar, 'fw-semi-bold')}>
-			<span className={styles['navbar-left']}>
+		<nav className="fixed top-0 left-0 right-0 h-navbar bg-primary-700 text-white px-8 flex justify-between items-center gap-6 z-40">
+			<span className="flex gap-8">
 				<Link href={URLS.HOME}>
-					<h1>DESOLIFY</h1>
+					<h1 className="fs-secondary-heading fw-bold">DESOLIFY</h1>
 				</Link>
 			</span>
 
-			<ul className={styles['navbar-list']}>
+			<ul className="hidden sm:flex sm:gap-4 sm:flex-1">
 				<li>
 					<NavLink href={URLS.TEAMS}>Teams</NavLink>
 				</li>
@@ -29,10 +27,10 @@ const Navbar: FC<Props> = ({}) => {
 				</li>
 			</ul>
 
-			<span className={styles['navbar-right']}>
+			<span>
 				<Button shape="rounded">
 					<FontAwesomeIcon icon={faGamepad} />
-					<span className={styles['navbar-button-text']}>Get Started</span>
+					<span className="ml-4">Get Started</span>
 				</Button>
 			</span>
 		</nav>
