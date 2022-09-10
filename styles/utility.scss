@@ -63,3 +63,7 @@
 .bg-gradient-primary {
 	background: linear-gradient(145deg, $clr-navbar, $clr-secondary-300);
 }
+
+.form-flow > * + * {
+	margin-top: 1.5rem;
+}

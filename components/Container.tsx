@@ -7,7 +7,7 @@ type ContainerProps = {
 };
 
 const Container = ({ className, children }: ContainerProps) => {
-	return <div className={joinClasses('max-w-full px-4 sm:max-w-4xl mx-auto', className)}>{children}</div>;
+	return <div className={joinClasses('max-w-full px-4 sm:max-w-3xl mx-auto', className)}>{children}</div>;
 };
 
 export default Container;

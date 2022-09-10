@@ -28,10 +28,12 @@ const Navbar: FC<Props> = ({}) => {
 			</ul>
 
 			<span>
-				<Button shape="rounded">
-					<FontAwesomeIcon icon={faGamepad} />
-					<span className="ml-4">Get Started</span>
-				</Button>
+				<Link href="/login">
+					<Button shape="rounded">
+						<FontAwesomeIcon icon={faGamepad} />
+						<span className="ml-4">Get Started</span>
+					</Button>
+				</Link>
 			</span>
 		</nav>
 	);

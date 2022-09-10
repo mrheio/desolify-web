@@ -1,0 +1,20 @@
+.input-container {
+	.label {
+	}
+
+	.label-light {
+		color: $clr-white;
+	}
+
+	.input {
+		@apply block px-4 py-2 border-4 border-transparent outline-none mt-2 rounded-md w-full;
+	}
+
+	.input-primary {
+		@apply bg-primary-600 focus:border-4 focus:border-primary-700;
+	}
+
+	.input-secondary {
+		@apply bg-secondary-300 focus:border-4 focus:border-secondary-500;
+	}
+}
