@@ -1,4 +1,5 @@
 export { default as Button } from './Button/Button';
+export { default as GoogleButton } from './Button/GoogleButton';
 export { default as Card } from './Card';
 export { default as Container } from './Container';
 export { default as DualSection } from './DualSection';
