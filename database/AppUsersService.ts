@@ -1,4 +1,4 @@
-import AppUser, { AppUserRawData } from '@models/AppUser';
+import AppUser, { AppUserRawData } from '../models/AppUser';
 import { appUsersRepository } from './FirestoreRepository';
 
 class AppUsersService {

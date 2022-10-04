@@ -1,4 +1,3 @@
-import { firestore } from '@configs/firebase.config';
 import {
 	addDoc,
 	collection,
@@ -12,6 +11,7 @@ import {
 	QueryConstraint,
 	setDoc,
 } from 'firebase/firestore';
+import { firestore } from '../configs/firebase.config';
 import { AppUser, Document, Game, Team } from '../models';
 import BaseRepository from './BaseRepository';
 

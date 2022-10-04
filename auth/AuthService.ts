@@ -1,8 +1,8 @@
-import { firebaseAuth } from '@configs/firebase.config';
-import CustomError from '@utils/errors/CustomError';
-import appUsersService from 'database/AppUsersService';
-import { appUsersRepository } from 'database/FirestoreRepository';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { firebaseAuth } from '../configs/firebase.config';
+import appUsersService from '../database/AppUsersService';
+import { appUsersRepository } from '../database/FirestoreRepository';
+import CustomError from '../utils/errors/CustomError';
 
 export type LoginProps = {
 	email: string;

@@ -1,5 +1,5 @@
-import { joinClasses } from '@utils/basics';
 import { ReactNode } from 'react';
+import { joinClasses } from '../utils/basics';
 
 type ContainerProps = {
 	className?: string;
