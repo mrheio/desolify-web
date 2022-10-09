@@ -9,6 +9,8 @@ export enum Model {
 	Team,
 }
 
+// test
+
 export default abstract class Document {
 	id: string;
 	createdAt: number;

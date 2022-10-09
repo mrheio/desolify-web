@@ -1,5 +1,5 @@
 import { QueryConstraint } from 'firebase/firestore';
-import Document from '../models/Document';
+import { Document } from '../models';
 
 export default interface BaseRepository<T extends Document> {
 	getAll(): Promise<T[]>;
