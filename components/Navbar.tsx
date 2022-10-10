@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import Button from '@components/Button/Button';
-import Link from '@components/Link/Link';
-import NavLink from '@components/Link/NavLink';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { URLS } from '@utils/misc';
+import { URLS } from '../utils/misc';
+import Button from './Button/Button';
+import Link from './Link/Link';
+import NavLink from './Link/NavLink';
 
 type Props = {};
 

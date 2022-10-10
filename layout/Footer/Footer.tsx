@@ -1,8 +1,8 @@
-import { Button, NavLink } from '@components';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { URLS } from '@utils/misc';
 import { FC } from 'react';
+import { Button, NavLink } from '../../components';
+import { URLS } from '../../utils/misc';
 import FooterList from './FooterList';
 
 const urls = [

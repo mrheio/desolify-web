@@ -1,6 +1,6 @@
-import { joinClasses } from '@utils/basics';
 import { default as NextLink, LinkProps } from 'next/link';
 import { forwardRef, PropsWithChildren } from 'react';
+import { joinClasses } from '../../utils/basics';
 
 type Props = LinkProps & {
 	underline?: boolean;

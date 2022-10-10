@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import { Card, DualSection } from '@components';
 import Image from 'next/image';
+import { Card, DualSection } from '../components';
 
 type Props = {};
 

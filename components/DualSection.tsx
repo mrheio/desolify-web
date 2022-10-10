@@ -1,5 +1,5 @@
-import { Container } from '@components';
 import { ReactNode } from 'react';
+import Container from './Container';
 
 type DualSectionProps = {
 	leftElement: ReactNode;

@@ -1,6 +1,6 @@
-import { Header } from '@layout';
 import { FC, PropsWithChildren } from 'react';
 import Footer from './Footer/Footer';
+import Header from './Header';
 
 type Props = {};
 

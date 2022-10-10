@@ -1,5 +1,5 @@
-import { joinClasses } from '@utils/basics';
 import { ButtonHTMLAttributes } from 'react';
+import { joinClasses } from '../../utils/basics';
 import styles from './Button.module.scss';
 
 type ButtonStyle = 'primary' | 'secondary' | 'naked';
