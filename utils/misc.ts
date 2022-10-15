@@ -6,4 +6,8 @@ export enum URLS {
 	HELP = '/help',
 	ABOUT = '/about',
 	GUIDELINES = '/guidelines',
+	LOGIN = '/login',
+	REGISTER = '/register',
 }
+
+export const SITE_NAME = 'Desolify';
