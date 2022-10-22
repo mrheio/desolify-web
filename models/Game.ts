@@ -4,25 +4,28 @@ import Document from './Document';
 export const getGameId = (name: string) => name.split(' ').join('_');
 export const getGameName = (id: string) => id.split('_').join(' ');
 
-export type GameProps = {
+export type GameRawData = {
 	id: string;
 	name: string;
 	maxPlayersInTeam: number;
 	createdAt: number;
+	iconPath?: string;
 };
 
 export default class Game extends Document {
 	name: string;
 	maxPlayersInTeam: number;
+	iconPath: string;
 
-	constructor({ id, name, maxPlayersInTeam, createdAt }: GameProps) {
+	constructor({ id, name, maxPlayersInTeam, createdAt, iconPath }: GameRawData) {
 		super(id, createdAt);
 		this.name = name;
 		this.maxPlayersInTeam = maxPlayersInTeam;
+		this.iconPath = iconPath ?? '/';
 	}
 
 	static fromDocument(doc: DocumentSnapshot) {
 		const data = doc.data();
-		return new Game(data as GameProps);
+		return new Game(data as GameRawData);
 	}
 }

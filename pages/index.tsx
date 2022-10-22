@@ -7,7 +7,7 @@ type Props = {};
 
 const Home: FC<Props> = () => {
 	return (
-		<section className="bg-gradient-primary px-8 min-h-main-content">
+		<section className="py-8">
 			<DualSection
 				leftElement={
 					<div className="w-full self-center">

@@ -4,7 +4,7 @@ import { SITE_NAME, URLS } from 'utils/misc';
 
 const Register: FC = ({}) => {
 	return (
-		<section className="bg-gradient-primary px-8 py-8 min-h-main-content">
+		<section className="py-8">
 			<form className="min-h-main-content max-w-md mx-auto flex flex-col gap-6 justify-center items-center">
 				<h1 className="text-white text-4xl font-bold">Create {SITE_NAME} Account</h1>
 				<InputField name="email" labelText="Email" fluid />

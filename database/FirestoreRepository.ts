@@ -11,6 +11,7 @@ import {
 	QueryConstraint,
 	setDoc,
 } from 'firebase/firestore';
+import { ItemAlreadyExists } from 'utils/errors/DbOpError';
 import { firestore } from '../configs/firebase.config';
 import { AppUser, Document, Game, Team } from '../models';
 import BaseRepository from './BaseRepository';
@@ -40,10 +41,19 @@ class FirestoreRepository<T extends Document> implements BaseRepository<T> {
 	}
 
 	async add(data: T): Promise<void> {
-		if (data.id === '') {
+		const { id } = data;
+
+		if (id === '') {
 			await addDoc(this.collectionRef, data);
 			return;
 		}
+
+		const res = await getDoc(doc(this.collectionRef, id));
+
+		if (res.exists()) {
+			throw new ItemAlreadyExists({ id });
+		}
+
 		await setDoc(doc(this.collectionRef, data.id), data);
 	}
 

@@ -5,14 +5,6 @@ export type AppUserRoles = {
 	admin: boolean;
 };
 
-export type AppUserProps = {
-	id: string;
-	email: string;
-	username: string;
-	roles: AppUserRoles;
-	createdAt: number;
-};
-
 export type AppUserRawData = {
 	id?: string;
 	email: string;
@@ -35,6 +27,6 @@ export default class AppUser extends Document {
 
 	static fromDocument(doc: DocumentSnapshot) {
 		const data = doc.data();
-		return new AppUser(data as AppUserProps);
+		return new AppUser(data as AppUserRawData);
 	}
 }
