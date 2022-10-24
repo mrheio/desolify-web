@@ -1,8 +1,8 @@
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { maybeConvertFirebaseError } from 'utils/errors';
 import { firebaseAuth } from '../configs/firebase.config';
 import appUsersService from '../database/AppUsersService';
 import { appUsersRepository } from '../database/FirestoreRepository';
-import CustomError from '../utils/errors/CustomError';
 
 export type LoginProps = {
 	email: string;
@@ -25,7 +25,7 @@ class AuthService {
 		try {
 			await signInWithEmailAndPassword(firebaseAuth, email, password);
 		} catch (error) {
-			throw CustomError.maybeConvertFirebaseError(error);
+			throw maybeConvertFirebaseError(error);
 		}
 	}
 
@@ -36,7 +36,7 @@ class AuthService {
 			} = await createUserWithEmailAndPassword(firebaseAuth, email, password);
 			await appUsersService.addUser({ id, email, username });
 		} catch (error) {
-			throw CustomError.maybeConvertFirebaseError(error);
+			throw maybeConvertFirebaseError(error);
 		}
 	}
 

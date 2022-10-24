@@ -11,7 +11,7 @@ import {
 	QueryConstraint,
 	setDoc,
 } from 'firebase/firestore';
-import { ItemAlreadyExists } from 'utils/errors/DbOpError';
+import { ItemAlreadyExists } from 'utils/errors';
 import { firestore } from '../configs/firebase.config';
 import { AppUser, Document, Game, Team } from '../models';
 import BaseRepository from './BaseRepository';

@@ -1,5 +1,5 @@
 import Game, { GameRawData } from 'models/Game';
-import { GameAlreadyExists, ItemAlreadyExists } from 'utils/errors/DbOpError';
+import { GameAlreadyExists, ItemAlreadyExists } from 'utils/errors';
 import { gamesRepository } from './FirestoreRepository';
 
 class GamesService {
