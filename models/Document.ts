@@ -1,5 +1,3 @@
-// test
-
 export default abstract class Document {
 	id: string;
 	createdAt: number;
@@ -8,4 +6,6 @@ export default abstract class Document {
 		this.id = id;
 		this.createdAt = createdAt;
 	}
+
+	abstract toObject(): object;
 }

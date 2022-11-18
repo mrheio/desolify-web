@@ -54,7 +54,7 @@ class FirestoreRepository<T extends Document> implements BaseRepository<T> {
 			throw new ItemAlreadyExists({ id });
 		}
 
-		await setDoc(doc(this.collectionRef, data.id), data);
+		await setDoc(doc(this.collectionRef, data.id), data.toObject());
 	}
 
 	async update(newData: T): Promise<void> {

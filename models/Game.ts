@@ -28,4 +28,14 @@ export default class Game extends Document {
 		const data = doc.data();
 		return new Game(data as GameRawData);
 	}
+
+	toObject(): object {
+		return {
+			id: this.id,
+			name: this.name,
+			maxPlayersInTeam: this.maxPlayersInTeam,
+			createdAt: this.createdAt,
+			iconPath: this.iconPath,
+		};
+	}
 }

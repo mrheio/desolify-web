@@ -29,4 +29,14 @@ export default class AppUser extends Document {
 		const data = doc.data();
 		return new AppUser(data as AppUserRawData);
 	}
+
+	toObject(): object {
+		return {
+			id: this.id,
+			email: this.email,
+			username: this.username,
+			roles: this.roles,
+			createdAt: this.createdAt,
+		};
+	}
 }

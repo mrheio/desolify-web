@@ -37,4 +37,8 @@ export default class Team extends Document {
 		const data = doc.data();
 		return new Team(data as TeamProps);
 	}
+
+	toObject(): object {
+		throw new Error('Method not implemented.');
+	}
 }

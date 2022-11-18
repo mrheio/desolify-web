@@ -1,16 +1,17 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Floating, InputField, Overlay } from 'components';
+import { FC } from 'react';
 import games from 'utils/data';
 import { useOverlayToggle } from 'utils/hooks';
 import _AddGame from './_AddGame';
 
-const Games = () => {
+const Games: FC = () => {
 	const [isOverlayOpen, toggleOverlay] = useOverlayToggle();
 
 	return (
 		<>
-			<section className="bg-gradient-primary p-8 min-h-main-content">
+			<section className="p-8 min-h-main-content">
 				<h1 className="text-center mb-16 text-5xl text-white font-bold">Available games</h1>
 
 				<div className="mb-8">
@@ -47,5 +48,7 @@ const Games = () => {
 		</>
 	);
 };
+
+Games.protected = true;
 
 export default Games;

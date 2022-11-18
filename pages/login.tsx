@@ -51,4 +51,6 @@ const Login: FC = ({}) => {
 	);
 };
 
+Login.unprotected = true;
+
 export default Login;
